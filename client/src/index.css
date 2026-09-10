@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --color-abyss: #0A1931;
+  --color-sea: #0E4D64;
+  --color-island: #009B3A;
+  --color-gold: #FED100;
+  --color-sunset: #FF6B35;
+  --color-cream: #FFF8EC;
+  --color-sand: #F5EEDD;
+}
+
+body { font-family: var(--font-body); background: #FFF8EC; color: #0A1931; }
+.font-display { font-family: var(--font-display); }
+.hero-pattern {
+  background-image: radial-gradient(circle at 20% 30%, rgba(254,209,0,.25), transparent 40%),
+    radial-gradient(circle at 85% 20%, rgba(0,155,58,.25), transparent 45%),
+    radial-gradient(circle at 70% 85%, rgba(255,107,53,.22), transparent 40%);
+}
+.card-hover { transition: all .25s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -15px rgba(10,25,49,.35); }
+.no-scrollbar::-webkit-scrollbar { display:none; }
+.no-scrollbar { scrollbar-width:none; }

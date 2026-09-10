@@ -1,0 +1,18 @@
+import axios from 'axios';
+const api = axios.create({ baseURL: '/api' });
+export const getParts = (params={}) => api.get('/parts',{params}).then(r=>r.data);
+export const getCars = (params={}) => api.get('/cars',{params}).then(r=>r.data);
+export const vinDecode = (vin) => api.get(`/vin/${vin}`).then(r=>r.data);
+export const importQuote = (body) => api.post('/import-quote', body).then(r=>r.data);
+export const createOrder = (body) => api.post('/orders', body).then(r=>r.data);
+export const track = (id) => api.get(`/track/${id}`).then(r=>r.data);
+export const sendContact = (body) => api.post('/contact', body).then(r=>r.data);
+export const getOrders = () => api.get('/orders').then(r=>r.data);
+export const getQuotes = () => api.get('/quotes').then(r=>r.data);
+export const getMethods = () => api.get('/payments/methods').then(r=>r.data);
+export const createIntent = (body) => api.post('/payments/create-intent', body).then(r=>r.data);
+export const confirmPayment = (body) => api.post('/payments/confirm', body).then(r=>r.data);
+export const getPayments = () => api.get('/payments').then(r=>r.data);
+export const getContacts = () => api.get('/contacts').then(r=>r.data);
+export const patchOrder = (id, body) => api.patch(`/orders/${id}`, body).then(r=>r.data);
+export default api;

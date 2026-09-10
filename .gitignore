@@ -1,0 +1,7 @@
+node_modules/
+client/dist/
+server/alrobe.db
+server/alrobe.db-shm
+server/alrobe.db-wal
+.env
+*.local
