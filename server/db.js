@@ -78,6 +78,8 @@ function seedIfEmpty(){
   }catch(e){ console.error('Seed error', e.message); }
 }
 seedIfEmpty();
+// Keep seeded product artwork current after an existing local database is upgraded.
+db.prepare('UPDATE parts SET img=? WHERE id=?').run('/oil-5w30.svg', 'FEB-7701');
 
 export const rowToCar = r => ({...r, specs: r.specs?JSON.parse(r.specs):[]});
 export const rowToOrder = r => ({...r, items: JSON.parse(r.items||'[]'), customer: JSON.parse(r.customer||'{}'), whatsapp_sent: !!r.whatsapp_sent});

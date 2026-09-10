@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <rect width="800" height="520" rx="36" fill="#0A1931"/>
+  <circle cx="650" cy="100" r="180" fill="#0E4D64" opacity=".7"/>
+  <circle cx="120" cy="460" r="170" fill="#009B3A" opacity=".55"/>
+  <path d="M335 112h108v55h-108z" fill="#111827"/>
+  <path d="M312 154h154l35 260c3 24-16 44-40 44H317c-24 0-43-20-40-44z" fill="#FED100"/>
+  <path d="M312 154h154l10 76H302z" fill="#FF6B35"/>
+  <rect x="303" y="250" width="172" height="116" rx="8" fill="#fff"/>
+  <text x="389" y="286" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#0A1931">FEBI</text>
+  <text x="389" y="319" text-anchor="middle" font-family="Arial,sans-serif" font-size="29" font-weight="800" fill="#009B3A">5W-30</text>
+  <text x="389" y="345" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#0A1931">FULLY SYNTHETIC</text>
+  <text x="44" y="72" font-family="Arial,sans-serif" font-size="28" font-weight="800" fill="#FED100">ENGINE CARE</text>
+  <text x="44" y="105" font-family="Arial,sans-serif" font-size="16" fill="#fff" opacity=".8">5 litre premium lubricant</text>
+</svg>
