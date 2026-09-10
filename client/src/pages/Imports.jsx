@@ -3,20 +3,20 @@ import { importQuote } from '../lib/api';
 import { Calculator, Ship, FileCheck, Timer } from 'lucide-react';
 
 export default function Imports(){
-  const [form,setForm]=useState({cif:20000, engineCC:1500, age:3, condition:'Used', origin:'Japan'});
+  const [form,setForm]=useState({cif:20000, engineCC:1500, age:10, condition:'Used', origin:'Japan'});
   const [res,setRes]=useState(null);
   const set = (k,v)=>setForm(f=>({...f,[k]:v}));
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="font-display font-extrabold text-4xl">New & Used <span className="text-[#0E4D64]">Import Desk</span></h1>
-      <p className="text-black/60 max-w-2xl">We source from Japan, UK & USA auctions, handle freight, Kingston clearance, duty and delivery. Get an instant estimate below — final quote from our broker in 24h.</p>
+       <h1 className="font-display font-extrabold text-4xl">Special-Purpose <span className="text-[#0E4D64]">Imports</span></h1>
+       <p className="text-black/60 max-w-2xl">We source vehicles typically 10–14+ years old from Japan, the UK and the USA, then coordinate freight, Kingston clearance, duty and delivery. Confirm eligibility before purchase; your final quote comes from our broker within 24h.</p>
       <div className="grid lg:grid-cols-2 gap-6 mt-6">
         <div className="bg-white rounded-3xl border p-6">
           <div className="font-display font-bold text-lg flex items-center gap-2"><Calculator size={18}/> Duty & landed-cost estimator</div>
           <div className="grid sm:grid-cols-2 gap-4 mt-4 text-sm">
             <label>CIF value (USD)<input type="number" value={form.cif} onChange={e=>set('cif',+e.target.value)} className="mt-1 w-full border rounded-xl px-3 py-2"/></label>
             <label>Engine CC<input type="number" value={form.engineCC} onChange={e=>set('engineCC',+e.target.value)} className="mt-1 w-full border rounded-xl px-3 py-2"/></label>
-            <label>Vehicle age (yrs)<input type="number" value={form.age} onChange={e=>set('age',+e.target.value)} className="mt-1 w-full border rounded-xl px-3 py-2"/></label>
+             <label>Vehicle age (yrs)<input type="number" min="10" value={form.age} onChange={e=>set('age',Math.max(10,+e.target.value))} className="mt-1 w-full border rounded-xl px-3 py-2"/><span className="text-xs text-black/50">This branch focuses on 10–14+ year vehicles.</span></label>
             <label>Origin<select value={form.origin} onChange={e=>set('origin',e.target.value)} className="mt-1 w-full border rounded-xl px-3 py-2"><option>Japan</option><option>UK</option><option>USA</option><option>Singapore</option></select></label>
           </div>
           <div className="flex gap-2 mt-4">{['New','Used'].map(c=><button key={c} onClick={()=>set('condition',c)} className={`px-4 py-2 rounded-full text-sm font-bold ${form.condition===c?'bg-[#0A1931] text-white':'border'}`}>{c}</button>)}</div>

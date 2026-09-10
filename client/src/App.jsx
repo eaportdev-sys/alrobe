@@ -37,7 +37,7 @@ export default function App(){
             </Routes>
           </main>
           <Footer/>
-          <a href={waLink('Hello ALROBE! I need help with parts / cars / logistics.')} target="_blank" rel="noreferrer"
+           <a href={waLink('Hello ALROBE! I need help with vehicle sales, parts sales or a special-purpose import.')} target="_blank" rel="noreferrer"
             className="fixed bottom-5 right-5 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-105 transition flex items-center gap-2 font-bold">
             <MessageCircle /> <span className="hidden sm:inline text-sm">Chat Sales</span>
           </a>

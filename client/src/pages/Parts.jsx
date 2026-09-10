@@ -15,8 +15,8 @@ export default function Parts(){
   useEffect(()=>{ load(); },[]);
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="font-display font-extrabold text-4xl">Auto Parts <span className="text-[#009B3A]">Shop</span></h1>
-      <p className="text-black/60">Genuine Febi Bilstein • Bosch • Luxxan — USD pricing, Kingston pickup or island delivery.</p>
+       <h1 className="font-display font-extrabold text-4xl">Parts <span className="text-[#009B3A]">Sales</span></h1>
+       <p className="text-black/60">Genuine Febi Bilstein, Bosch and Luxxan parts with fitment support, Kingston pickup or island delivery.</p>
       <div className="grid lg:grid-cols-[280px_1fr] gap-6 mt-6">
         <aside className="space-y-4">
           <div className="bg-white rounded-3xl border p-5">

@@ -11,8 +11,8 @@ export function Cars(){
   const list = cars.filter(c=>(cond==='All'||c.condition===cond)&&(c.title.toLowerCase().includes(q.toLowerCase())));
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="font-display font-extrabold text-4xl">New & Used <span className="text-[#FF6B35]">Cars</span></h1>
-      <p className="text-black/60">Duty-ready lot at Kingston Free Zone + fresh Japan/UK pipeline. Every car inspected, history-checked.</p>
+       <h1 className="font-display font-extrabold text-4xl">Vehicle <span className="text-[#FF6B35]">Sales</span></h1>
+       <p className="text-black/60">New and used vehicles, inspected and sourced for Jamaica. Shop what is ready or ask us to find your next vehicle.</p>
       <div className="flex flex-wrap gap-2 mt-4">
         <input value={q} onChange={e=>setQ(e.target.value)} placeholder="Search Hilux, Prado, Vezel..." className="border rounded-full px-4 py-2 text-sm w-64 outline-none"/>
         {['All','New','Used'].map(c=><button key={c} onClick={()=>setCond(c)} className={`px-4 py-2 rounded-full text-sm font-bold ${cond===c?'bg-[#0A1931] text-white':'bg-white border'}`}>{c}</button>)}

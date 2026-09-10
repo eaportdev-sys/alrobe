@@ -56,7 +56,7 @@ app.get('/api/cars/:id', (req,res)=>{
 
 // ---- Import quote ----
 app.post('/api/import-quote', (req,res)=>{
-  const { cif=20000, engineCC=1500, age=3, condition='Used' } = req.body;
+  const { cif=20000, engineCC=1500, age=10, condition='Used' } = req.body;
   const duty = cif*0.20 + (engineCC>2000? cif*0.10:0) + (age>5? 500:0);
   const gct = (cif+duty)*0.15;
   const total = cif+duty+gct+350+280;
