@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { getCars } from '../lib/api';
 import { carToWhatsApp } from '../lib/whatsapp';
+import { demoCars } from '../lib/demoData';
 import { ArrowLeft, Fuel, Cog, Gauge, MapPin, BadgeCheck, MessageCircle } from 'lucide-react';
 
 export function Cars(){
-  const [cars,setCars]=useState([]); const [cond,setCond]=useState('All'); const [q,setQ]=useState('');
+  const [cars,setCars]=useState(demoCars); const [cond,setCond]=useState('All'); const [q,setQ]=useState('');
   useEffect(()=>{ getCars().then(setCars).catch(()=>{}); },[]);
   const list = cars.filter(c=>(cond==='All'||c.condition===cond)&&(c.title.toLowerCase().includes(q.toLowerCase())));
   return (

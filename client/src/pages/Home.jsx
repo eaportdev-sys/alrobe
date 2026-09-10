@@ -2,10 +2,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, ShieldCheck, Truck, Warehouse, Car, Package, Star, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { getParts, getCars } from '../lib/api';
+import { demoParts, demoCars } from '../lib/demoData';
 import { useStore } from '../lib/store';
 
 export default function Home(){
-  const [parts,setParts]=useState([]); const [cars,setCars]=useState([]);
+  const [parts,setParts]=useState(demoParts); const [cars,setCars]=useState(demoCars);
   const {add}=useStore();
   useEffect(()=>{ getParts().then(d=>setParts(d.slice(0,4))).catch(()=>{}); getCars().then(d=>setCars(d.slice(0,3))).catch(()=>{}); },[]);
   return (

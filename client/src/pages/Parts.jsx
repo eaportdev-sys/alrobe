@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getParts, vinDecode } from '../lib/api';
 import { useStore } from '../lib/store';
+import { demoParts } from '../lib/demoData';
 import { Search, Star, ScanSearch } from 'lucide-react';
 
 export default function Parts(){
   const [params] = useSearchParams();
-  const [parts,setParts]=useState([]); const [q,setQ]=useState(params.get('q')||'');
+  const [parts,setParts]=useState(demoParts); const [q,setQ]=useState(params.get('q')||'');
   const [brand,setBrand]=useState('All'); const [cat,setCat]=useState(params.get('cat')||'All');
   const [vin,setVin]=useState(''); const [vinRes,setVinRes]=useState(null);
   const {add}=useStore();
